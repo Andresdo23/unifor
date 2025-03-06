@@ -11,7 +11,7 @@ alunoForm.addEventListener('submit', async (e) => {
     const aluno = { nome, dataNascimento, turma };
 
     // Enviar dados para o Back4App
-    await fetch('https://parseapi.back4app.com>back4app.io/classes/Alunos', {
+    await fetch('https://YOUR_BACK4APP_APP_ID.back4app.io/classes/Alunos', {
         method: 'POST',
         headers: {
             'X-Parse-Application-Id': '3lyv6RhweTG0W4YPoeU81Tjp4e2EeCfRJZzLlDm5',
@@ -32,7 +32,7 @@ alunoForm.addEventListener('submit', async (e) => {
 
 // Função para carregar alunos (opcional)
 async function carregarAlunos() {
-    const response = await fetch('https://parseapi.back4app.com>back4app.io/classes/Alunos', {
+    const response = await fetch('https://YOUR_BACK4APP_APP_ID.back4app.io/classes/Alunos', {
         method: 'GET',
         headers: {
             'X-Parse-Application-Id': '3lyv6RhweTG0W4YPoeU81Tjp4e2EeCfRJZzLlDm5',
