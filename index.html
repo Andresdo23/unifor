@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Gestão Escolar</h1>
+    
+    <h2>Cadastro de Alunos</h2>
+    <form id="alunoForm">
+        <input type="text" id="alunoNome" placeholder="Nome do Aluno" required>
+        <input type="date" id="alunoDataNascimento" required>
+        <input type="text" id="alunoTurma" placeholder="Turma" required>
+        <button type="submit">Cadastrar Aluno</button>
+    </form>
+
+    <h2>Lista de Alunos</h2>
+    <ul id="listaAlunos"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
