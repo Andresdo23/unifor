@@ -11,12 +11,12 @@ alunoForm.addEventListener('submit', async (e) => {
     const aluno = { nome, dataNascimento, turma };
 
     // Enviar dados para o Back4App
-    await fetch('https://YOUR_BACK4APP_APP_ID.back4app.io/classes/Alunos', {
+    await fetch('https://parseapi.back4app.com/classes/Alunos', {
         method: 'POST',
         headers: {
-            'X-Parse-Application-Id': '3lyv6RhweTG0W4YPoeU81Tjp4e2EeCfRJZzLlDm5',
-            'X-Parse-REST-API-Key': 'P4CcOrrA3zHi4apq4Ps8YQXHVnJ3v0vYqPDOw8a2',
-            'Content-Type': 'application/json'
+            "X-Parse-Application-Id: 3lyv6RhweTG0W4YPoeU81Tjp4e2EeCfRJZzLlDm5",
+            "X-Parse-REST-API-Key: P4CcOrrA3zHi4apq4Ps8YQXHVnJ3v0vYqPDOw8a2",
+            "Content-Type: application/json" 
         },
         body: JSON.stringify(aluno)
     });
@@ -32,11 +32,11 @@ alunoForm.addEventListener('submit', async (e) => {
 
 // Função para carregar alunos (opcional)
 async function carregarAlunos() {
-    const response = await fetch('https://YOUR_BACK4APP_APP_ID.back4app.io/classes/Alunos', {
+    const response = await fetch('https://parseapi.back4app.com/classes/Alunos', {
         method: 'GET',
         headers: {
-            'X-Parse-Application-Id': '3lyv6RhweTG0W4YPoeU81Tjp4e2EeCfRJZzLlDm5',
-            'X-Parse-REST-API-Key': 'P4CcOrrA3zHi4apq4Ps8YQXHVnJ3v0vYqPDOw8a2',
+            "X-Parse-Application-Id: 3lyv6RhweTG0W4YPoeU81Tjp4e2EeCfRJZzLlDm5",
+            "X-Parse-REST-API-Key: P4CcOrrA3zHi4apq4Ps8YQXHVnJ3v0vYqPDOw8a2",
         }
     });
     const data = await response.json();
